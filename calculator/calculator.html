@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #0a0a0a, #3a4452)
+        }
+
+        .calculator {
+            height: 450px;
+            width: 300px;
+            border: 2px solid gray;
+            border-radius: 20px;
+            box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5)
+        }
+
+        input[type="button"] {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            background: transparent;
+            box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+
+        input[type="button"]:hover {
+            width: 52px;
+            height: 52px;
+            background-color: #1223ab;
+        }
+
+        input[type="text"] {
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 250px;
+            height: 50px;
+            font-size: 35px;
+            border-radius: 20px;
+            color: whitesmoke;
+            background: transparent;
+            text-align: right;
+        }
+
+        input::placeholder {
+            color: whitesmoke;
+        }
+
+        .calculator #zero {
+            height: 50px;
+            width: 120px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form action="" name="calc">
+                <input type="text" name="screen" placeholder="0" id="inputBox"><br>
+
+                <input type="button" value="9" onclick="calc.screen.value+='9'">
+                <input type="button" value="8" onclick="calc.screen.value+='8'">
+                <input type="button" value="7" onclick="calc.screen.value+='7'">
+                <input type="button" value="+" onclick="calc.screen.value+='+'"><br>
+                <input type="button" value="6" onclick="calc.screen.value+='6'">
+                <input type="button" value="5" onclick="calc.screen.value+='5'">
+                <input type="button" value="4" onclick="calc.screen.value+='4'">
+                <input type="button" value="-" onclick="calc.screen.value+='-'"><br>
+                <input type="button" value="3" onclick="calc.screen.value+='3'">
+                <input type="button" value="2" onclick="calc.screen.value+='2'">
+                <input type="button" value="1" onclick="calc.screen.value+='1'">
+                <input type="button" value="*" onclick="calc.screen.value+='*'"><br>
+                <input type="button" value="0" onclick="calc.screen.value+='0'" id="zero">
+                <input type="button" value="." onclick="calc.screen.value+='.'">
+                <input type="button" value="/" onclick="calc.screen.value+='/'"><br>
+                <input type="button" value="DEL" onclick="screen.value = screen.value.toString().slice(0,-1)">
+                <input type="button" value="AC" onclick="calc.screen.value=' '">
+                <input type="button" value="=" onclick="calc.screen.value=eval(screen.value)" style="color:#fb7c14;">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
